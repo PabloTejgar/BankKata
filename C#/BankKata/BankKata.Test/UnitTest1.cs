@@ -16,5 +16,13 @@ namespace BankKata.Test
             account.Deposit(deposit);
             return account.Balance;
         }
+
+        public void WhenWithdrawThenBalanceDecreases()
+        {
+            Account account = new Account(100);
+            account.Withdraw(100);
+            Assert.That(account.Balance, Is.EqualTo(0));
+        }
+
     }
 }
