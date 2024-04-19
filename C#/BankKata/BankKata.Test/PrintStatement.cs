@@ -9,6 +9,7 @@ namespace BankKata.Test
     [TestFixture]
     public class PrintStatementTest
     {
+        [Test]
         public void CreateTransactionThenTransactionReturned()
         {
             Account account = new Account(1000);
