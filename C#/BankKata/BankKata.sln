@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata", "BankKata\BankKata.csproj", "{06C65968-689F-4A9E-916A-1C82767A285A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankKata", "BankKata\BankKata.csproj", "{06C65968-689F-4A9E-916A-1C82767A285A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata.Test", "BankKata.Test\BankKata.Test.csproj", "{AB8D43A6-7249-4888-914E-D20B0C81158A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankKata.Test", "BankKata.Test\BankKata.Test.csproj", "{AB8D43A6-7249-4888-914E-D20B0C81158A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
