@@ -10,6 +10,7 @@ namespace BankKata
 
         public Account(int initialBalance)
         {
+            Balance = initialBalance;
         }
 
         public void Deposit(int amount)

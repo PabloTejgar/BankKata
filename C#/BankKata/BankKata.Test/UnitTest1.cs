@@ -7,12 +7,14 @@ namespace BankKata.Test
         {
         }
 
-        [Test]
-        public void WhenDepositThenBalanceIncreases()
+        [TestCase(100, 0, ExpectedResult = 100)]
+        [TestCase(350, 150, ExpectedResult = 500)]
+        [TestCase(40, 160, ExpectedResult = 200)]
+        public int WhenDepositThenBalanceIncreases(int deposit, int initialBalance)
         {
-            Account account = new Account(0);
-            account.Deposit(100);
-            Assert.That(100, Is.EqualTo(account.Balance));
+            Account account = new Account(initialBalance);
+            account.Deposit(deposit);
+            return account.Balance;
         }
     }
 }
