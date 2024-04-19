@@ -1,5 +1,6 @@
 namespace BankKata.Test
 {
+    [TestFixture]
     public class AccountTest
     {
         [SetUp]
@@ -26,6 +27,5 @@ namespace BankKata.Test
             account.Withdraw(withdraw);
             return account.Balance;
         }
-
     }
 }
