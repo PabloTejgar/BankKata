@@ -20,7 +20,7 @@ namespace BankKata
 
         public void Withdraw(int amount)
         {
-
+            Balance -= amount;
         }
 
         public string PrintStatement()

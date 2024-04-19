@@ -17,6 +17,7 @@ namespace BankKata.Test
             return account.Balance;
         }
 
+        [Test]
         public void WhenWithdrawThenBalanceDecreases()
         {
             Account account = new Account(100);
