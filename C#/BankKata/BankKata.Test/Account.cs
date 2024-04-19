@@ -17,12 +17,14 @@ namespace BankKata.Test
             return account.Balance;
         }
 
-        [Test]
-        public void WhenWithdrawThenBalanceDecreases()
+        [TestCase(100, 100, ExpectedResult = 0)]
+        [TestCase(100, 450, ExpectedResult = 350)]
+        [TestCase(500, 600, ExpectedResult = 100)]
+        public int WhenWithdrawThenBalanceDecreases(int withdraw, int initialBalance)
         {
-            Account account = new Account(100);
-            account.Withdraw(100);
-            Assert.That(account.Balance, Is.EqualTo(0));
+            Account account = new Account(initialBalance);
+            account.Withdraw(withdraw);
+            return account.Balance;
         }
 
     }
