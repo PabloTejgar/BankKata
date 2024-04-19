@@ -12,9 +12,18 @@ namespace BankKata.Test
         [Test]
         public void CreateTransactionThenTransactionReturned()
         {
-            Account account = new Account(1000);
-            account.Deposit(100);
+            Account account = new Account(3000);
+            account.Withdraw(500);
             Assert.That(account.PrintStatement(), Is.EqualTo("Date || Amount || Balance" + "\n 14 / 01 / 2012 || -500 || 2500"));
         }
+
+        [Test]
+        public void CreateTransaction2ThenTransactionReturned()
+        {
+            Account account = new Account(3000);
+            account.Deposit(200);
+            Assert.That(account.PrintStatement(), Is.EqualTo("Date || Amount || Balance" + "\n 14 / 01 / 2012 || 200 || 3200"));
+        }
+
     }
 }

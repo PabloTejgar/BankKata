@@ -26,6 +26,7 @@ namespace BankKata
         public string PrintStatement()
         {
             return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || -500 || 2500";
+            
         }
     }
 }
