@@ -6,7 +6,7 @@ namespace BankKata
 {
     public class Account
     {
-        public int balance;
+        public int Balance { get; private set; }
 
         public Account(int initialBalance)
         {

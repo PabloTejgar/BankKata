@@ -1,6 +1,6 @@
 namespace BankKata.Test
 {
-    public class Tests
+    public class AccountTest
     {
         [SetUp]
         public void Setup()
@@ -8,9 +8,11 @@ namespace BankKata.Test
         }
 
         [Test]
-        public void Test1()
+        public void WhenDepositThenBalanceIncreases()
         {
-            Assert.Pass();
+            Account account = new Account(0);
+            account.Deposit(100);
+            Assert.That(100, Is.EqualTo(account.Balance));
         }
     }
 }

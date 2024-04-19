@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\BankKata.csproj" />
+    <ProjectReference Include="..\BankKata\BankKata.csproj" />
   </ItemGroup>
 
 </Project>
