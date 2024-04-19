@@ -1,0 +1,69 @@
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+*.log
+*.vspscc
+obj/
+bin/
+_UpgradeReport_Files/
+TestResults/
+[Tt]est[Rr]esult*/
+*.VisualState.xml
+*_i.c
+*.ncb
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# .NET core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings
+
+# NuGet
+*.nuget.packages
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+
+# Linux
+*.log
+*.swp
+
+# Visual Studio Code
+.vscode/
