@@ -9,14 +9,10 @@
             listTransactions = new List<Transaction>();
         }
 
-        internal void Withdraw(int amount, DateTime time)
+        public void AddTransaction(int amount, DateTime time)
         {
             listTransactions.Add(new Transaction(amount, time));
         }
 
-        internal void Deposit(int amount, DateTime time)
-        {
-            listTransactions.Add(new Transaction(amount, time));
-        }
     }
 }
