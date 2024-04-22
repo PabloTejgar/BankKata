@@ -10,11 +10,12 @@ namespace BankKata.Test
     {
 
         private readonly IConsole testConsole = Substitute.For<IConsole>();
+        private readonly IConsole console = Substitute.For<IConsole>();
 
         [Test]
         public void CorrectlySetTransaction()
         {
-            var account = new Account(0, testConsole);
+            var account = new Account(null, testConsole);
 
             account.Deposit(1000);
             account.Withdraw(500);
