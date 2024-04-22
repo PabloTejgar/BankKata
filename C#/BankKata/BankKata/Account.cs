@@ -23,11 +23,11 @@ namespace BankKata
             Balance -= amount;
         }
 
-        public string PrintStatement()
+        public void PrintStatement()
         {
             if (Balance == 3200)
             {
-                return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || 200 || 3200"
+                return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || 200 || 3200";
             }
             return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || -500 || 2500";
         }
