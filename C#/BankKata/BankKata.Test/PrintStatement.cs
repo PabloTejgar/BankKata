@@ -10,12 +10,12 @@ namespace BankKata.Test
     {
 
         private readonly IConsole testConsole = Substitute.For<IConsole>();
-        private readonly IConsole console = Substitute.For<IConsole>();
+        private readonly IClock testClock = Substitute.For<IClock>();
 
         [Test]
         public void CorrectlySetTransaction()
         {
-            var account = new Account(null, testConsole);
+            var account = new Account(new TransactionRepository(), testClock, testConsole);
 
             account.Deposit(1000);
             account.Withdraw(500);

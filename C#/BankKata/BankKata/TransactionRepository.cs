@@ -2,14 +2,21 @@
 {
     public class TransactionRepository
     {
-        internal void Withdraw(int amount)
+        private List<Transaction> listTransactions;
+
+        public TransactionRepository()
         {
-            throw new NotImplementedException();
+            listTransactions = new List<Transaction>();
         }
 
-        internal void Deposit(int amount)
+        internal void Withdraw(int amount, DateTime time)
         {
-            throw new NotImplementedException();
+            listTransactions.Add(new Transaction(amount, time));
+        }
+
+        internal void Deposit(int amount, DateTime time)
+        {
+            listTransactions.Add(new Transaction(amount, time));
         }
     }
 }

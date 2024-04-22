@@ -5,28 +5,27 @@ using System.Text;
 namespace BankKata
 {
     public class Account
-
-
     {
-        public int Balance { get; private set; }
         private IConsole console;
+        private IClock clock;
         private TransactionRepository transactionRepository;
         private string HEADER = "date       || credit   || debit    || balance";
 
-        public Account(TransactionRepository transactionRepositoryInstance, IConsole consoleInstance)
+        public Account(TransactionRepository transactionRepositoryInstance, IClock clockInstance, IConsole consoleInstance)
         {
             console = consoleInstance;
+            clock = clockInstance;
             transactionRepository = transactionRepositoryInstance;
         }
 
         public void Deposit(int amount)
         {
-            transactionRepository.Deposit(amount);
+            transactionRepository.Deposit(amount, clock.Now());
         }
 
         public void Withdraw(int amount)
         {
-            transactionRepository.Withdraw(amount);
+            transactionRepository.Withdraw(amount, clock.Now());
         }
 
         public void PrintStatement()
