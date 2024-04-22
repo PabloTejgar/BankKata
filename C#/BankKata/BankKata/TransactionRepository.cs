@@ -19,9 +19,18 @@
             return listTransactions;
         }
 
-        public object FormatTransactions()
+        public List<string> FormatTransactions()
         {
-            throw new NotImplementedException();
+            int balance = 0;
+            List<string> formattedTransactions = new List<string>();
+            foreach (var transaction in listTransactions)
+            {
+                balance += transaction.Amount;
+                formattedTransactions.Add($"{transaction.Format()} || {balance}.00");
+            }
+
+            formattedTransactions.Reverse();
+            return formattedTransactions;
         }
     }
 }

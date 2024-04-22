@@ -12,7 +12,7 @@ namespace BankKata.Test
         public void TransactioDeposit()
         {
             Transaction transaction = new Transaction(500, new DateTime(2024, 01, 01));
-            Assert.That(transaction.Format(), Is.EqualTo("01/01/2024 || 500.00 || "));
+            Assert.That(transaction.Format(), Is.EqualTo("01/01/2024 || 500.00 ||"));
         }
 
         [Test]

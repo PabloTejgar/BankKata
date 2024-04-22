@@ -25,16 +25,16 @@ namespace BankKata
 
         public void Withdraw(int amount)
         {
-            transactionRepository.AddTransaction(amount, clock.Now());
+            transactionRepository.AddTransaction(-amount, clock.Now());
         }
 
         public void PrintStatement()
         {
             console.PrintLine(HEADER);
-            var transactions = transactionRepository.GetTransactions();
-            foreach(Transaction transaction in transactions)
+            var transactions = transactionRepository.FormatTransactions();
+            foreach(var transaction in transactions)
             {
-                console.PrintLine(transaction.Format());
+                console.PrintLine(transaction);
             }
         }
     }
