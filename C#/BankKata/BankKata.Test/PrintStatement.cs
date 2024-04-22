@@ -16,13 +16,16 @@ namespace BankKata.Test
         {
             var account = new Account(0, testConsole);
 
-            account.Deposit(100);
+            account.Deposit(1000);
+            account.Withdraw(500);
             account.PrintStatement();
 
             Received.InOrder(() =>
             {
                 testConsole.Received().PrintLine("date       || credit   || debit    || balance");
                 testConsole.Received().PrintLine("14/01/2012 || || 500.00 || 2500.00");
+                testConsole.Received().PrintLine("13/01/2012 || 2000.00 || || 3000.00");
+                testConsole.Received().PrintLine("10/01/2012 || 1000.00 || || 1000.00");
             });
         }
     }

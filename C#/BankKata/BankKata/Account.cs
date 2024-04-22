@@ -10,6 +10,7 @@ namespace BankKata
     {
         public int Balance { get; private set; }
         private IConsole console;
+        private string HEADER = "date       || credit   || debit    || balance";
 
         public Account(int initialBalance, IConsole consoleInstance)
         {
@@ -29,7 +30,8 @@ namespace BankKata
 
         public void PrintStatement()
         {
-            console.PrintLine("date       || credit   || debit    || balance");
+            console.PrintLine(HEADER);
+            console.PrintLine("14/01/2012 || || 500.00 || 2500.00");
         }
     }
 }
