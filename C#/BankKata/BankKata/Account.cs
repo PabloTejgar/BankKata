@@ -31,9 +31,11 @@ namespace BankKata
         public void PrintStatement()
         {
             console.PrintLine(HEADER);
-            console.PrintLine("14/01/2012 || || 500.00 || 2500.00");
-            console.PrintLine("13/01/2012 || 2000.00 || || 3000.00");
-            console.PrintLine("10/01/2012 || 1000.00 || || 1000.00");
+            var transactions = transactionRepository.GetTransactions();
+            foreach(Transaction transaction in transactions)
+            {
+                console.PrintLine(transaction.Format());
+            }
         }
     }
 }

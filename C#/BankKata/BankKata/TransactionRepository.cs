@@ -13,5 +13,15 @@
         {
             listTransactions.Add(new Transaction(amount, time));
         }
+
+        public List<Transaction> GetTransactions()
+        {
+            return listTransactions;
+        }
+
+        public object FormatTransactions()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
