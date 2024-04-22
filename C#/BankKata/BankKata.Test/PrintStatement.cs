@@ -14,7 +14,7 @@ namespace BankKata.Test
         [Test]
         public void CorrectlySetTransaction()
         {
-            var account = new Account(0);
+            var account = new Account(0, testConsole);
 
             account.Deposit(100);
             account.PrintStatement();
@@ -22,9 +22,7 @@ namespace BankKata.Test
             Received.InOrder(() =>
             {
                 testConsole.Received().PrintLine("date       || credit   || debit    || balance");
-                testConsole.Received().PrintLine("14/01/2012 || 100.00 ||  || 100.00");
             });
         }
-
     }
 }

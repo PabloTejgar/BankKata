@@ -5,12 +5,16 @@ using System.Text;
 namespace BankKata
 {
     public class Account
+
+
     {
         public int Balance { get; private set; }
+        private IConsole console;
 
-        public Account(int initialBalance)
+        public Account(int initialBalance, IConsole consoleInstance)
         {
             Balance = initialBalance;
+            console = consoleInstance;
         }
 
         public void Deposit(int amount)
@@ -25,11 +29,7 @@ namespace BankKata
 
         public void PrintStatement()
         {
-            if (Balance == 3200)
-            {
-                return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || 200 || 3200";
-            }
-            return "Date || Amount || Balance" + "\n 14 / 01 / 2012 || -500 || 2500";
+            console.PrintLine("date       || credit   || debit    || balance");
         }
     }
 }

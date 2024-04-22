@@ -13,7 +13,7 @@ namespace BankKata.Test
         [TestCase(40, 160, ExpectedResult = 200)]
         public int WhenDepositThenBalanceIncreases(int deposit, int initialBalance)
         {
-            Account account = new Account(initialBalance);
+            Account account = new Account(initialBalance, new PrintStatement());
             account.Deposit(deposit);
             return account.Balance;
         }
@@ -23,7 +23,7 @@ namespace BankKata.Test
         [TestCase(500, 600, ExpectedResult = 100)]
         public int WhenWithdrawThenBalanceDecreases(int withdraw, int initialBalance)
         {
-            Account account = new Account(initialBalance);
+            Account account = new Account(initialBalance, new PrintStatement());
             account.Withdraw(withdraw);
             return account.Balance;
         }
