@@ -1,7 +1,4 @@
 ﻿using NSubstitute;
-using System;
-using NUnit.Framework;
-
 
 namespace BankKata.Test
 {
@@ -17,7 +14,11 @@ namespace BankKata.Test
         {
             var account = new Account(new TransactionRepository(), testClock, testConsole);
 
+            testClock.Now().Returns(new DateTime(2012, 01, 10));
             account.Deposit(1000);
+            testClock.Now().Returns(new DateTime(2012, 01, 13));
+            account.Deposit(2000);
+            testClock.Now().Returns(new DateTime(2012, 01, 14));
             account.Withdraw(500);
             account.PrintStatement();
 

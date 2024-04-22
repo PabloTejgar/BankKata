@@ -13,6 +13,5 @@
         {
             listTransactions.Add(new Transaction(amount, time));
         }
-
     }
 }
