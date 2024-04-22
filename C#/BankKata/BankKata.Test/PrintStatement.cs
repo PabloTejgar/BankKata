@@ -22,6 +22,7 @@ namespace BankKata.Test
             Received.InOrder(() =>
             {
                 testConsole.Received().PrintLine("date       || credit   || debit    || balance");
+                testConsole.Received().PrintLine("14/01/2012 || || 500.00 || 2500.00");
             });
         }
     }
